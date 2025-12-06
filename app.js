@@ -631,214 +631,597 @@ find the even number inside an array by for loop
 /*==================================== Question No 31 =========================================
 let array = ["alice", "bob", "charlie"]; convert first letter of each in toUppercase()
 ======================================= Answer =====================================*/
-let array = ["alice", "bob", "charlie"];
-let result = [];
-for(let key of array){
-  let requirement = key.charAt(0).toUpperCase()+ key.slice(1).toLowerCase();
-  result.push(requirement)
-  console.log(requirement)
+// let array = ["alice", "bob", "charlie"];
+// let result = [];
+// for(let key of array){
+//   let requirement = key.charAt(0).toUpperCase()+ key.slice(1).toLowerCase();
+//   result.push(requirement)
+//   console.log(requirement)
+// }
+
+// console.log(result)
+
+
+
+/*==================================== Question No 32 =========================================
+The variable that we decalre outside function or block scope {} is called global variable 
+we can access global variable in everywhere we want,
+The varible that we define inside a function we can access it only inside function we can not 
+access it outside function , it is called local variable. 
+we can access local variable outside functon only by return 
+======================================= Answer =====================================*/
+// function abc(numOne,numTwo){
+//   let sum = numOne + numTwo;
+//   return sum;
+  
+// }
+
+// let ans = abc(5,10)
+// console.log(ans)
+
+
+/*==================================== Question No 33 =========================================
+we can modified the global variable inside function by using window. , remember we can only 
+modified or update global variable if created by var , not let or const
+======================================= Answer =====================================*/
+// var num = 100;
+// function addition(){
+//   console.log('window.number :',window)
+//   window.num = window.num + 5
+// console.log(num)
+// }
+// addition()
+// console.log('outside funciton : ',num)
+
+/*==================================== Question No 34 =========================================
+calling global variable inside function
+======================================= Answer =====================================*/
+// var numberr = 5 ;
+// function abc(){
+//   let numberr = 10; 
+//   console.log('local variable : ',numberr);
+//   console.log('global variable : ',window.numberr)
+// }
+
+// abc()
+
+
+
+
+/*==================================== Question No 35 =========================================
+block scope  
+the variable that we create inside {} is called block scope variable, var is not block 
+scope means if we create var inside {} we can accesss it outside but const and let are block scoped 
+var is only fuction scope
+======================================= Answer =====================================*/
+// {
+//   var numThree = 30
+// }
+
+// console.log(numThree)
+// {
+//   const name = 'Aziz'
+// }
+// console.log(name)
+/*==================================== Question No 36 =========================================
+Hoisting 
+when our js file loads , js v8 engine reads or scans our js file
+calling functions or varialbe before declaration in js file is called hoisting ,,
+var and traditional function is hoisted but let , const and arrow function is not hoisted, 
+Es06 all items are not hoisted
+======================================= Answer =====================================*/
+// console.log(name)
+// // var name = 'Aziz'
+// // let name = 'Aziz';
+// const name = 'Aziz';
+
+// abc()
+
+// function abc(){
+//   console.log('hellow i am hoisted funciton')
+// }
+
+// abc()
+// const abc = ()=>{
+//   console.log('Am i hoisted function')
+// }
+
+
+/*==================================== Question No 37 =========================================
+Math.pow() is built in js function it is used to find the power or exponent of any number 
+we pass two things inside its parameter, one base and another exponent
+======================================= Answer =====================================*/
+// let num = 2 
+// let ans = Math.pow(num,3);
+// console.log(ans)
+
+
+
+/*==================================== Question No 38 =========================================
+Exponentiation operator 
+Exponentiation operator is advance of Math.pow(),
+======================================= Answer =====================================*/
+// let number  = 2 ;
+// let ans = number ** 3; 
+// console.log(ans)
+
+
+/*==================================== Question No 39 =========================================
+Local Storage 
+is a storage of browser. we can store small text and data in local storage, we can not
+store images and heavy data in local storage. when we close our browser or shut down 
+computer , data does not removes and remains save , we can use it in same browser and 
+same computer, data does not removes when we ourselves do not remove it, 
+======================================= Answer =====================================*/
+
+// // save name in local storage 
+// function saveName(){
+//     let name = document.getElementById('nameInput').value;
+//     if(name.trim() === ''){
+//         alert ('enter your name')
+//         return
+//     }
+//     localStorage.setItem('username',name)
+//     alert('name saved')
+//     document.getElementById('nameInput').value = ''
+// }
+
+// // removeName
+// function removeName(){
+//     let getName = localStorage.getItem('username');
+//     if(getName){
+//         localStorage.removeItem('username')
+//         alert('Name removed successfully')
+//     }
+//     else{
+//         alert('username is not existing in local storage')
+//     }
+// }
+
+// // getname
+// function getName(){
+//     let gettingName = localStorage.getItem('username');
+//     if(gettingName){
+//         alert('welocme');
+//         let show = document.getElementById('show');
+//         show.innerHTML = gettingName
+//     //    document.body.innerHTML = gettingName
+//     }
+//     else{
+//         alert('local storage is empty')
+//     }
+// }
+
+
+
+
+/*==================================== Question No 1 =========================================
+
+======================================= Answer =====================================*/
+
+
+
+
+
+/*==================================== Question No 40 =========================================
+if we decalre a variable and donot give it value it is called undefined but if we 
+declare a variabe and give it value null deliberately , it is called null
+======================================= Answer =====================================*/
+// let a;
+// console.log(a)
+// let b = null;
+// console.log(b)
+
+
+/*==================================== Question No 41 =========================================
+local storage
+======================================= Answer =====================================*/
+            
+// const user = {
+//     username : 'Aziz',
+//     designation : 'developer',
+//     city : 'Karachi',
+//     age : 30,
+//     skills : ['html','css','javascript']
+// }
+// console.log(user,typeof user);
+// const uid = new Date().getTime();
+// console.log(uid);
+// const stringData = JSON.stringify(user);
+// console.log(stringData,typeof stringData);
+// localStorage.setItem('data',stringData)
+// localStorage.setItem('userId',JSON.stringify(uid))
+
+/*==================================== Question No 42 =========================================
+callback 
+the function is passed to another function as an argument is called call back function 
+======================================= Answer =====================================*/
+// function sayHello() {
+//   console.log("Hello!");
+// }
+
+// function greet(callback) {
+//   callback(); // calling the callback function
+// }
+
+// greet(sayHello);
+// function sayHello(){
+//     console.log('hello')
+// }
+// function greet(callback){
+//     callback()
+// }
+// greet(sayHello)
+
+
+
+// second example:
+//        function main(a, b) {
+//   let ans = a + b;
+//   console.log(ans);
+// }
+
+// function second(cb) {
+//   let a = 4;
+//   let b = 5;
+//   cb(a, b); // pass a and b to the callback
+// }
+
+// second(main);
+
+// function main(a,b){
+//     let ans = a + b;
+//     console.log(ans)
+// }
+// function second(cb){
+//     let m = 4;
+//     let n = 5;
+//     cb(m,n)
+// }
+// second(main)
+
+// function hello(){
+//     console.log('i am hello function ')
+// }
+// function main(ok){
+//     ok()
+// }
+// main(hello)
+
+/*==================================== Question No 43 =========================================
+object destructuring . 
+we can get properties values of object by .notation like obj.age but here we destruct object 
+left side we write variable like var, const or let than inside {} we write properties name and after 
+= we write obj name 
+======================================= Answer =====================================*/
+// let obj = {
+//     name : 'Aziz',
+//     password : 1234,
+//     age : 30,
+//     designation : 'developer'
+// }
+// console.log(obj)
+// const {name, ...rest} = obj;
+// console.log(name);
+// console.log(rest)
+
+
+
+
+/*==================================== Question No 44 =========================================
+call back function 
+the funtion that we pass as an argument to another function is called call back funciton 
+======================================= Answer =====================================*/
+// const greeting = ()=>{
+//     console.log('I am call back function')
+// }
+
+// const main = (a)=>{
+// a()
+// }
+// main(greeting)
+
+/*==================================== Question No 45 =========================================
+Higher order funciton 
+the function that takes another function as an argument or return a new function or do both tasks ,
+take function as argument and return a funtion also is called Higher order function 
+======================================= Answer =====================================*/
+//  First Example :
+//         ________________________________
+// function higherorder(receive)
+// {receive()};
+
+// function greeting(){
+//     console.log('welcome to higher order funciton')
+// }
+// higherorder(greeting())
+
+// function higherorder(a){
+//     a()
+
+// }
+
+// function greeting(){
+//     console.log('welcome to higher order function')
+// }
+// higherorder(greeting)
+
+
+// returning a function 
+// const higherOrderFunction = (num) =>{
+//      console.log('num',num)
+//     return function(anotherNum){
+//          console.log('another num :',anotherNum)
+//         return num * anotherNum
+//     }}
+//     const result = higherOrderFunction(5);
+//     console.log('result ', result(2))
+
+// const higherOrderFunction = (num)=>{
+//     console.log('num: ',num);
+//     return function (anotherNum){
+//         console.log('another num :',anotherNum)
+//         return num * anotherNum
+//     }
+// }
+// const result = higherOrderFunction(5)
+// console.log('resul ',result(2))
+/*==================================== Question No 46 =========================================
+Closure funciton 
+we make a parent funciton and inside parent funciton we return a anonymous function and 
+child (anonymous ) uses the parameter and local variable of parent funtion directly with 
+out receing in its parameter , is called closure funtion , the child function is called 
+closure function b/c it remembers the scope of the outer function , it can use the variable that 
+we declare in its parent funciton scope, let ,var and const also
+======================================= Answer =====================================*/
+
+// function parent(a){
+//     let b = 10;
+//     return function(){
+//         return a + b
+
+//     }
+// }
+// parent(4)
+
+// let ans = parent(4);
+// console.log(ans())
+
+
+/*==================================== Question No 47 =========================================
+object oriented programming 
+it is an object and we write data, variables and functions inside  oop.
+The first pillar of oop is object
+======================================= Answer =====================================*/
+// The first pillar of oop
+// let obj = {
+//     name : 'aziz',
+//     age : 30,
+//     designation: 'developer',
+//     greeting : function (){
+//         return  `My name is ${this.name} and my age is ${this.age}`
+//     }
+// }
+// console.log(obj.greeting())
+
+
+
+/*==================================== Question No 48 =========================================
+class is second pillar of oop, first we write class and than we write the name of class 
+initial letter capital like Car, and we use constructor function inside class object to 
+receiving value by parameter, we receive values in parameter of constructio and save them in 
+{} by this.name = name , and 
+ if we have to show this information than we create a method inside class obj after constructor.
+======================================= Answer =====================================*/
+//  class Student {
+// constructor(name,age,designation){this.name = name;
+//   this.age = age;
+//   this.designation = designation;
+// }
+// details(){return `My name is ${this.name} and my age is ${this.age} and my designation is ${this.designation}`}
+// }
+// const newStudent = new Student('Aziz',30,'Designer')
+// console.log(newStudent);
+// let ans = newStudent.details();
+// console.log(ans)
+
+// class Student {
+//     constructor (name,age,designation){
+//         this.name = name;
+//         this.age = age,
+//         this.designation = designation
+
+//     }
+//     details(){return ` My name is ${this.name}, my age is ${this.age} and my designation 
+//     is ${this.designation}`}
+// }
+// const newStudent = new Student('Aziz',30,'developer')
+// console.log(newStudent);
+// let ans = newStudent.details();
+// console.log(ans)
+
+
+
+// class Car {
+//     constructor(color,model,year){
+//         this.color = color,
+//         this.model = model,
+//         this.year = year
+//     }
+//     details(){
+//         return ` The color of car is ${this.color} , the model of car is ${this.model} and 
+//         manufactururing year is ${this.year}`
+//     }
+// }
+
+// const newCar = new Car('green','honda',2023)
+// console.log(newCar.details())
+/*==================================== Question No 49 =========================================
+inheritence 
+inheritence is third pillar of oop, if we have created  class object and we are creating 
+another object than we can use the properities of first object by using concept of inheritence 
+we write extends before the name of first object and receive the properties of first object and 
+new object in constructor paramete and in constructor {} we access the properties that are we 
+extending in super and that are we not extending by parents we get by this.property , we receive all the properties 
+from parent by using extends by super keyword.
+======================================= Answer =====================================*/
+//  class Student {
+//   constructor (name){this.name = name;}
+// }
+// class Student2 extends Student {
+//   constructor(name,age){super(name)
+//     this.age = age}
+//   show(){return `My name is ${this.name} and age is ${this.age}`}
+// }
+// const result = new Student2('Ahmed',30);
+// let ans = result.show();
+// console.log(ans)
+// class Student {
+//     constructor(name){
+//         this.name = name
+//     }
+// }
+// class Student2 extends Student {
+//     constructor(name,age){
+//         super(name)
+//         this.age = age
+//     }
+//     show(){return `My name is ${this.name} and my age is ${this.age}`}
+// }
+// const newStudent  = new Student2('ahmed',40)
+// console.log(newStudent);
+// let ans = newStudent.show();
+// console.log(ans)
+
+// second exmaple 
+// class Student { 
+//     constructor(name,age,designation){
+//         this.name = name,
+//         this.age = age,
+//         this.designation = designation
+//     }
+// }
+
+// class Student2 extends Student {
+//     constructor(name,age,designation,city){
+//         super(name,age,designation)
+// this.city = city
+//     }
+//     show(){
+//         return `My name is ${this.name}, my age is ${this.age}, my deignaiton is ${this.designation} and 
+//         my city is ${this.city}`
+//     }
+// }
+// const newStudent = new Student2('Aziz',30,'developer','karachi')
+// console.log(newStudent.show())
+/*==================================== Question No 50 =========================================
+polymorphism 
+polymorphism is fourth pillar of oop . 
+same function name but different behaviour depending on the object 
+
+======================================= Answer =====================================*/
+
+// class Cars {
+//   works(){return `cars are driving on roads`}
+// }
+// let ans1 = new Cars();
+// let result = ans1.works();
+// console.log(result)
+// // 2 
+// class Boats extends Cars{
+//   works(){return `Boats are sailing on water`}
+// }
+// let ans2 = new Boats();
+// let resul1 = ans2.works();
+// console.log(resul1);
+// // 3 
+// class Kites extends Boats{
+//   works(){return `kites are flying in air`}
+// }
+// let ans3 = new Kites();
+// let resul3 = ans3.works();
+// console.log(resul3)
+
+// class Cars {
+//     works(){
+//         return ` cars are running on the roads`
+//     }
+// }
+// let ans = new Cars();
+// console.log(ans.works())
+// // boats 
+// class Boats extends Cars {
+//     works(){
+//         return ` Boats are sailing on water`
+//     }
+// }
+// let ans2 = new Boats();
+// console.log(ans2.works())
+
+// // aeroplane 
+// class Aeroplane extends Cars {
+//     works(){
+//         return `Aeroplanes fly in the air`
+//     }
+// }
+// let ans3 = new Aeroplane();
+// console.log(ans3.works())
+
+/*==================================== Question No 51 =========================================
+Encapsulation 
+hiding private data in class object and give access by specific method 
+======================================= Answer =====================================*/
+
+class BankAccount {
+    #balance = 100;
+    // deposit
+    deposit(amount){
+        if(this.#balance >= 0){
+            return this.#balance =  this.#balance + amount
+        }
+    }
+    // withdraw 
+    withdraw(amount){
+        if(this.#balance > amount){
+            return this.#balance = this.#balance - amount
+        }
+        else{ console.log('Insufficient balance')}
+    }
+    // checkBalance
+     checkBalance(){
+        return this.#balance
+     }
 }
-
-console.log(result)
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
+let account = new BankAccount()
+console.log(account.checkBalance())
+console.log(account.deposit(400))
+console.log(account.checkBalance())
+console.log(account.withdraw(3000))
+console.log(account.checkBalance())
 
 /*==================================== Question No 1 =========================================
 
 ======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-https://themewagon.com/themes/free-bootstrap-4-html5-web-developer-portfolio-website-template-satner/
-======================================= Answer =====================================*//*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
-
-
-
-
-/*==================================== Question No 1 =========================================
-
-======================================= Answer =====================================*/
-
+// class Remote {
+//   turnOn() {
+//     this.#sendSignal("Power On");
+//   }
+
+//   changeChannel(channel) {
+//     this.#sendSignal(`Changing to channel ${channel}`);
+//   }
+
+//   // hidden process
+//   #sendSignal(signal) {
+//     console.log("Signal sent:", signal);
+//   }
+// }
+
+// let remote = new Remote();
+// remote.turnOn();           // Signal sent: Power On
+// remote.changeChannel(5);   // Signal sent: Changing to channel 5
+
+// // ❌ remote.#sendSignal("hack"); // Error: private method
 
 
 
